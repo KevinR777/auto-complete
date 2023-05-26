@@ -1,10 +1,20 @@
 #auto-complete-input {
     width: 100%;
     padding: 12px 10px;
-    margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     height: 50px;
     min-width: 500px;
+}
+
+.highlight{
+    font-weight: bold;
+}
+
+.options-dropdown{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: ghostwhite;
 }

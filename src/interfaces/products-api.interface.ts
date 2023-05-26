@@ -1,3 +1,4 @@
+//Interface for the products api response
 export interface ProductsApiResponse {
   limit: number;
   products: Products[];
@@ -5,6 +6,7 @@ export interface ProductsApiResponse {
   total: number;
 }
 
+//Product type
 export type Products = {
   brand: string;
   category: string;

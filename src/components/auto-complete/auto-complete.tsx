@@ -1,16 +1,24 @@
-import { FC } from "react";
-
-interface AutoCompleteProps {
-  options: Options[];
-}
-
-type Options = {
-  id: string;
-  name: string;
-};
+import { FC, memo, useState } from "react";
+import "./auto-complete.css";
+import {
+  AutoCompleteProps,
+  Options,
+} from "../../interfaces/auto-complete/auto-complete.interface";
 
 const AutoComplete: FC<AutoCompleteProps> = ({ options }) => {
-  return <div id="auto-complete">Auto Complete</div>;
+  const [showOptions, setShowOptions] = useState<boolean>(false);
+  const [filteredOptions, setFilteredOptions] = useState<Options[]>(options);
+  const [searchValue, setSearchValue] = useState<string>("");
+
+  return (
+    <div id="auto-complete">
+      <input
+        type="search"
+        id="auto-complete-input"
+        placeholder="Type to begin searching"
+      />
+    </div>
+  );
 };
 
-export default AutoComplete;
+export default memo(AutoComplete);
